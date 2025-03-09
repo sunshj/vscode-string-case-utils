@@ -1,0 +1,18 @@
+{
+  "command.pascalCase": "大驼峰 PascalCase",
+  "command.camelCase": "小驼峰 camelCase",
+  "command.kebabCase": "短横线 kebab-case",
+  "command.snakeCase": "下划线 snake_case",
+  "command.pascalSnakeCase": "大驼峰+下划线 Pascal_Snake_Case",
+  "command.trainCase": "大驼峰+短横线 Train-Case",
+  "command.constantCase": "常量 CONSTANT_CASE",
+  "command.upperCase": "全大写 UPPERCASE",
+  "command.lowerCase": "全小写 lowercase",
+  "command.capitalCase": "单词首字母大写 Capital Case",
+  "command.sentenceCase": "句子首字母大写 Sentence case",
+  "command.dotCase": "点分割 dot.case",
+  "command.pathCase": "路径 path/case",
+  "command.noCase": "no case",
+  "command.desensitize_star": "脱敏 ***",
+  "command.desensitize_x": "脱敏 xxx"
+}

@@ -1,0 +1,18 @@
+{
+  "command.pascalCase": "PascalCase",
+  "command.camelCase": "camelCase",
+  "command.kebabCase": "kebab-case",
+  "command.snakeCase": "snake_case",
+  "command.pascalSnakeCase": "Pascal_Snake_Case",
+  "command.trainCase": "Train-Case",
+  "command.constantCase": "CONSTANT_CASE",
+  "command.upperCase": "UPPERCASE",
+  "command.lowerCase": "lowercase",
+  "command.capitalCase": "Capital Case",
+  "command.sentenceCase": "Sentence case",
+  "command.dotCase": "dot.case",
+  "command.pathCase": "path/case",
+  "command.noCase": "no case",
+  "command.desensitize_star": "desensitize using ***",
+  "command.desensitize_x": "desensitize using xxx"
+}

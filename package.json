@@ -20,6 +20,8 @@
     "LICENSE.md",
     "README.md",
     "dist/*",
+    "package.nls.json",
+    "package.nls.zh-cn.json",
     "res/*"
   ],
   "main": "./dist/index.js",

@@ -5,6 +5,14 @@ powered by [change-case](https://github.com/blakeembrey/change-case)
 <a href="https://marketplace.visualstudio.com/items?itemName=sunshj.vscode-string-case-utils" target="__blank"><img src="https://img.shields.io/visual-studio-marketplace/v/sunshj.vscode-string-case-utils.svg?color=eee&amp;label=VS%20Code%20Marketplace&logo=visual-studio-code" alt="Visual Studio Marketplace Version" /></a>
 <a href="https://kermanx.github.io/reactive-vscode/" target="__blank"><img src="https://img.shields.io/badge/made_with-reactive--vscode-%23007ACC?style=flat&labelColor=%23229863"  alt="Made with reactive-vscode" /></a>
 
+
+## Usage
+
+1. Select text.
+2. Right-Click and choose `String Case Utils`.
+3. Select the desired command to execute.
+
+
 ## Configurations
 
 <!-- configs -->

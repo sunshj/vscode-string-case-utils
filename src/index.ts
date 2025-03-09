@@ -24,7 +24,6 @@ import { logger } from './utils'
 import type { Selection } from 'vscode'
 
 interface TextSelectionData {
-  index: number
   text: string
   selection: Selection
 }
@@ -36,8 +35,7 @@ const { activate, deactivate } = defineExtension(() => {
   const selections = useTextEditorSelections(editor)
 
   const textSelectionsData = computed<TextSelectionData[]>(() =>
-    selections.value.map((selection, index) => ({
-      index,
+    selections.value.map(selection => ({
       text: document.value?.getText(selection) || '',
       selection
     }))
@@ -45,10 +43,10 @@ const { activate, deactivate } = defineExtension(() => {
 
   async function replace(replacer: (text: string) => string) {
     const newData = textSelectionsData.value.map(t => ({ ...t, text: replacer(t.text) }))
-    for (const { selection, text, index } of textSelectionsData.value) {
+    for (const { selection, text } of newData) {
       if (!text.trim()) return
       await editor.value?.edit(editBuilder => {
-        editBuilder.replace(selection, newData.find(i => i.index === index)!.text)
+        editBuilder.replace(selection, text)
       })
     }
   }

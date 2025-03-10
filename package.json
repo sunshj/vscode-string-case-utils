@@ -29,7 +29,7 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "prepare": "pnpm run update",
-    "update": "vscode-ext-gen --output src/generated/meta.ts --scope StringCaseUtils",
+    "update": "vscode-ext-gen --output src/generated/meta.ts --scope stringCaseUtils",
     "vscode:prepublish": "pnpm run build",
     "pack": "vsce package --no-dependencies",
     "release": "bumpp --no-tag && pnpm run pack",
@@ -71,6 +71,27 @@
         "label": "🐍String Case Utils"
       }
     ],
+    "configuration": {
+      "title": "String Case Utils",
+      "properties": {
+        "stringCaseUtils.showDesensitizeOption": {
+          "type": "boolean",
+          "default": true,
+          "description": "%configuration.showDesensitizeOption%"
+        },
+        "stringCaseUtils.desensitizeChar": {
+          "type": "string",
+          "maxLength": 1,
+          "default": "*",
+          "description": "%configuration.desensitizeChar%"
+        },
+        "stringCaseUtils.showRandomHashOptions": {
+          "type": "boolean",
+          "default": true,
+          "description": "%configuration.showRandomHashOptions%"
+        }
+      }
+    },
     "menus": {
       "editor/context": [
         {
@@ -80,80 +101,80 @@
       ],
       "stringCaseUtils": [
         {
-          "command": "StringCaseUtils.pascalCase",
+          "command": "stringCaseUtils.pascalCase",
           "group": "1_modification@0"
         },
         {
-          "command": "StringCaseUtils.camelCase",
+          "command": "stringCaseUtils.camelCase",
           "group": "1_modification@1"
         },
         {
-          "command": "StringCaseUtils.kebabCase",
+          "command": "stringCaseUtils.kebabCase",
           "group": "1_modification@2"
         },
         {
-          "command": "StringCaseUtils.snakeCase",
+          "command": "stringCaseUtils.snakeCase",
           "group": "1_modification@3"
         },
         {
-          "command": "StringCaseUtils.pascalSnakeCase",
+          "command": "stringCaseUtils.pascalSnakeCase",
           "group": "1_modification@4"
         },
         {
-          "command": "StringCaseUtils.trainCase",
+          "command": "stringCaseUtils.trainCase",
           "group": "1_modification@5"
         },
         {
-          "command": "StringCaseUtils.constantCase",
+          "command": "stringCaseUtils.constantCase",
           "group": "1_modification@6"
         },
         {
-          "command": "StringCaseUtils.upperCase",
+          "command": "stringCaseUtils.upperCase",
           "group": "1_modification@7"
         },
         {
-          "command": "StringCaseUtils.lowerCase",
+          "command": "stringCaseUtils.lowerCase",
           "group": "1_modification@8"
         },
         {
-          "command": "StringCaseUtils.capitalCase",
+          "command": "stringCaseUtils.capitalCase",
           "group": "1_modification@9"
         },
         {
-          "command": "StringCaseUtils.sentenceCase",
+          "command": "stringCaseUtils.sentenceCase",
           "group": "1_modification@10"
         },
         {
-          "command": "StringCaseUtils.dotCase",
+          "command": "stringCaseUtils.dotCase",
           "group": "1_modification@11"
         },
         {
-          "command": "StringCaseUtils.pathCase",
+          "command": "stringCaseUtils.pathCase",
           "group": "1_modification@12"
         },
         {
-          "command": "StringCaseUtils.noCase",
+          "command": "stringCaseUtils.noCase",
           "group": "1_modification@13"
         },
         {
-          "command": "StringCaseUtils.desensitize_star",
-          "group": "1_modification@14"
+          "command": "stringCaseUtils.desensitize",
+          "group": "1_modification@14",
+          "when": "config.stringCaseUtils.showDesensitizeOption"
         },
         {
-          "command": "StringCaseUtils.desensitize_x",
-          "group": "1_modification@15"
+          "command": "stringCaseUtils.random_hash16",
+          "group": "1_modification@15",
+          "when": "config.stringCaseUtils.showRandomHashOptions"
         },
         {
-          "command": "StringCaseUtils.random_hash16",
-          "group": "1_modification@16"
+          "command": "stringCaseUtils.random_hash32",
+          "group": "1_modification@16",
+          "when": "config.stringCaseUtils.showRandomHashOptions"
         },
         {
-          "command": "StringCaseUtils.random_hash32",
-          "group": "1_modification@17"
-        },
-        {
-          "command": "StringCaseUtils.random_hash64",
-          "group": "1_modification@18"
+          "command": "stringCaseUtils.random_hash64",
+          "group": "1_modification@17",
+          "when": "config.stringCaseUtils.showRandomHashOptions"
         }
       ]
     },
@@ -161,97 +182,92 @@
       {
         "title": "%command.pascalCase%",
         "category": "String Case Utils",
-        "command": "StringCaseUtils.pascalCase"
+        "command": "stringCaseUtils.pascalCase"
       },
       {
         "title": "%command.camelCase%",
         "category": "String Case Utils",
-        "command": "StringCaseUtils.camelCase"
+        "command": "stringCaseUtils.camelCase"
       },
       {
         "title": "%command.kebabCase%",
         "category": "String Case Utils",
-        "command": "StringCaseUtils.kebabCase"
+        "command": "stringCaseUtils.kebabCase"
       },
       {
         "title": "%command.snakeCase%",
         "category": "String Case Utils",
-        "command": "StringCaseUtils.snakeCase"
+        "command": "stringCaseUtils.snakeCase"
       },
       {
         "title": "%command.pascalSnakeCase%",
         "category": "String Case Utils",
-        "command": "StringCaseUtils.pascalSnakeCase"
+        "command": "stringCaseUtils.pascalSnakeCase"
       },
       {
         "title": "%command.trainCase%",
         "category": "String Case Utils",
-        "command": "StringCaseUtils.trainCase"
+        "command": "stringCaseUtils.trainCase"
       },
       {
         "title": "%command.constantCase%",
         "category": "String Case Utils",
-        "command": "StringCaseUtils.constantCase"
+        "command": "stringCaseUtils.constantCase"
       },
       {
         "title": "%command.upperCase%",
         "category": "String Case Utils",
-        "command": "StringCaseUtils.upperCase"
+        "command": "stringCaseUtils.upperCase"
       },
       {
         "title": "%command.lowerCase%",
         "category": "String Case Utils",
-        "command": "StringCaseUtils.lowerCase"
+        "command": "stringCaseUtils.lowerCase"
       },
       {
         "title": "%command.capitalCase%",
         "category": "String Case Utils",
-        "command": "StringCaseUtils.capitalCase"
+        "command": "stringCaseUtils.capitalCase"
       },
       {
         "title": "%command.sentenceCase%",
         "category": "String Case Utils",
-        "command": "StringCaseUtils.sentenceCase"
+        "command": "stringCaseUtils.sentenceCase"
       },
       {
         "title": "%command.dotCase%",
         "category": "String Case Utils",
-        "command": "StringCaseUtils.dotCase"
+        "command": "stringCaseUtils.dotCase"
       },
       {
         "title": "%command.pathCase%",
         "category": "String Case Utils",
-        "command": "StringCaseUtils.pathCase"
+        "command": "stringCaseUtils.pathCase"
       },
       {
         "title": "%command.noCase%",
         "category": "String Case Utils",
-        "command": "StringCaseUtils.noCase"
+        "command": "stringCaseUtils.noCase"
       },
       {
-        "title": "%command.desensitize_star%",
+        "title": "%command.desensitize%",
         "category": "String Case Utils",
-        "command": "StringCaseUtils.desensitize_star"
-      },
-      {
-        "title": "%command.desensitize_x%",
-        "category": "String Case Utils",
-        "command": "StringCaseUtils.desensitize_x"
+        "command": "stringCaseUtils.desensitize"
       },
       {
         "title": "%command.random_hash16%",
         "category": "String Case Utils",
-        "command": "StringCaseUtils.random_hash16"
+        "command": "stringCaseUtils.random_hash16"
       },
       {
         "title": "%command.random_hash32%",
         "category": "String Case Utils",
-        "command": "StringCaseUtils.random_hash32"
+        "command": "stringCaseUtils.random_hash32"
       },
       {
         "title": "%command.random_hash64%",
         "category": "String Case Utils",
-        "command": "StringCaseUtils.random_hash64"
+        "command": "stringCaseUtils.random_hash64"
       }
     ]
   },

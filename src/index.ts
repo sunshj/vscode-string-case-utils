@@ -19,6 +19,8 @@ import {
   useCommand,
   useTextEditorSelections
 } from 'reactive-vscode'
+
+import { config } from './config'
 import { commands, displayName } from './generated/meta'
 import { logger, randomHash } from './utils'
 
@@ -62,8 +64,9 @@ const { activate, deactivate } = defineExtension(() => {
   useCommand(commands.noCase, () => replace(noCase))
 
   // desensitize
-  useCommand(commands.desensitizeStar, () => replace(t => t.replaceAll(/[A-Z0-9]/gi, '*')))
-  useCommand(commands.desensitizeX, () => replace(t => t.replaceAll(/[A-Z0-9]/gi, 'x')))
+  useCommand(commands.desensitize, () =>
+    replace(t => t.replaceAll(/[A-Z0-9]/gi, config.desensitizeChar))
+  )
 
   // random hash
   useCommand(commands.randomHash16, () => replace(() => randomHash(16)))

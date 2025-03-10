@@ -17,7 +17,11 @@ powered by [change-case](https://github.com/blakeembrey/change-case)
 
 <!-- configs -->
 
-**No data**
+| Key                                     | Description                           | Type      | Default |
+| --------------------------------------- | ------------------------------------- | --------- | ------- |
+| `stringCaseUtils.showDesensitizeOption` | %configuration.showDesensitizeOption% | `boolean` | `true`  |
+| `stringCaseUtils.desensitizeChar`       | %configuration.desensitizeChar%       | `string`  | `"*"`   |
+| `stringCaseUtils.showRandomHashOptions` | %configuration.showRandomHashOptions% | `boolean` | `true`  |
 
 <!-- configs -->
 
@@ -25,27 +29,26 @@ powered by [change-case](https://github.com/blakeembrey/change-case)
 
 <!-- commands -->
 
-| Command                            | Title                                         |
-| ---------------------------------- | --------------------------------------------- |
-| `StringCaseUtils.pascalCase`       | String Case Utils: %command.pascalCase%       |
-| `StringCaseUtils.camelCase`        | String Case Utils: %command.camelCase%        |
-| `StringCaseUtils.kebabCase`        | String Case Utils: %command.kebabCase%        |
-| `StringCaseUtils.snakeCase`        | String Case Utils: %command.snakeCase%        |
-| `StringCaseUtils.pascalSnakeCase`  | String Case Utils: %command.pascalSnakeCase%  |
-| `StringCaseUtils.trainCase`        | String Case Utils: %command.trainCase%        |
-| `StringCaseUtils.constantCase`     | String Case Utils: %command.constantCase%     |
-| `StringCaseUtils.upperCase`        | String Case Utils: %command.upperCase%        |
-| `StringCaseUtils.lowerCase`        | String Case Utils: %command.lowerCase%        |
-| `StringCaseUtils.capitalCase`      | String Case Utils: %command.capitalCase%      |
-| `StringCaseUtils.sentenceCase`     | String Case Utils: %command.sentenceCase%     |
-| `StringCaseUtils.dotCase`          | String Case Utils: %command.dotCase%          |
-| `StringCaseUtils.pathCase`         | String Case Utils: %command.pathCase%         |
-| `StringCaseUtils.noCase`           | String Case Utils: %command.noCase%           |
-| `StringCaseUtils.desensitize_star` | String Case Utils: %command.desensitize_star% |
-| `StringCaseUtils.desensitize_x`    | String Case Utils: %command.desensitize_x%    |
-| `StringCaseUtils.random_hash16`    | String Case Utils: %command.random_hash16%    |
-| `StringCaseUtils.random_hash32`    | String Case Utils: %command.random_hash32%    |
-| `StringCaseUtils.random_hash64`    | String Case Utils: %command.random_hash64%    |
+| Command                           | Title                                        |
+| --------------------------------- | -------------------------------------------- |
+| `stringCaseUtils.pascalCase`      | String Case Utils: %command.pascalCase%      |
+| `stringCaseUtils.camelCase`       | String Case Utils: %command.camelCase%       |
+| `stringCaseUtils.kebabCase`       | String Case Utils: %command.kebabCase%       |
+| `stringCaseUtils.snakeCase`       | String Case Utils: %command.snakeCase%       |
+| `stringCaseUtils.pascalSnakeCase` | String Case Utils: %command.pascalSnakeCase% |
+| `stringCaseUtils.trainCase`       | String Case Utils: %command.trainCase%       |
+| `stringCaseUtils.constantCase`    | String Case Utils: %command.constantCase%    |
+| `stringCaseUtils.upperCase`       | String Case Utils: %command.upperCase%       |
+| `stringCaseUtils.lowerCase`       | String Case Utils: %command.lowerCase%       |
+| `stringCaseUtils.capitalCase`     | String Case Utils: %command.capitalCase%     |
+| `stringCaseUtils.sentenceCase`    | String Case Utils: %command.sentenceCase%    |
+| `stringCaseUtils.dotCase`         | String Case Utils: %command.dotCase%         |
+| `stringCaseUtils.pathCase`        | String Case Utils: %command.pathCase%        |
+| `stringCaseUtils.noCase`          | String Case Utils: %command.noCase%          |
+| `stringCaseUtils.desensitize`     | String Case Utils: %command.desensitize%     |
+| `stringCaseUtils.random_hash16`   | String Case Utils: %command.random_hash16%   |
+| `stringCaseUtils.random_hash32`   | String Case Utils: %command.random_hash32%   |
+| `stringCaseUtils.random_hash64`   | String Case Utils: %command.random_hash64%   |
 
 <!-- commands -->
 

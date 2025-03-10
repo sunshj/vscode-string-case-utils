@@ -13,9 +13,12 @@
   "command.dotCase": "点分割 dot.case",
   "command.pathCase": "路径 path/case",
   "command.noCase": "no case",
-  "command.desensitize_star": "脱敏 ***",
-  "command.desensitize_x": "脱敏 xxx",
+  "command.desensitize": "脱敏",
   "command.random_hash16": "16位随机哈希 Random Hash(16)",
   "command.random_hash32": "32位随机哈希 Random Hash(32)",
-  "command.random_hash64": "64位随机哈希 Random Hash(64)"
+  "command.random_hash64": "64位随机哈希 Random Hash(64)",
+
+  "configuration.showDesensitizeOption": "是否显示脱敏选项",
+  "configuration.desensitizeChar": "设置默认脱敏字符",
+  "configuration.showRandomHashOptions": "是否显示随机哈希选项"
 }

@@ -2,7 +2,7 @@
   "publisher": "sunshj",
   "name": "vscode-string-case-utils",
   "displayName": "String Case Utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "packageManager": "pnpm@9.7.1",
   "description": "String Case Utils (Case Conversion & Desensitization)",

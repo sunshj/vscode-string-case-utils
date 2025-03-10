@@ -14,5 +14,8 @@
   "command.pathCase": "路径 path/case",
   "command.noCase": "no case",
   "command.desensitize_star": "脱敏 ***",
-  "command.desensitize_x": "脱敏 xxx"
+  "command.desensitize_x": "脱敏 xxx",
+  "command.random_hash16": "16位随机哈希 Random Hash(16)",
+  "command.random_hash32": "32位随机哈希 Random Hash(32)",
+  "command.random_hash64": "64位随机哈希 Random Hash(64)"
 }

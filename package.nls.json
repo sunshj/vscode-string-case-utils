@@ -14,5 +14,8 @@
   "command.pathCase": "path/case",
   "command.noCase": "no case",
   "command.desensitize_star": "desensitize using ***",
-  "command.desensitize_x": "desensitize using xxx"
+  "command.desensitize_x": "desensitize using xxx",
+  "command.random_hash16": "Random Hash(16)",
+  "command.random_hash32": "Random Hash(32)",
+  "command.random_hash64": "Random Hash(64)"
 }

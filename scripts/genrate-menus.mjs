@@ -8,13 +8,13 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 /**
  *
  * @param {string} filePath
- * @returns {[Record<string,any>,(() => void)]} json and save function
+ * @returns {[Record<string,any>,((jsonObj?:Record<string,any>) => void)]} json and save function
  */
 function loadJSON(filePath) {
   const pkg = readFileSync(filePath).toString('utf-8')
   const json = JSON.parse(pkg)
-  function saveJson() {
-    writeFileSync(filePath, JSON.stringify(json, null, 2))
+  function saveJson(jsonObj) {
+    writeFileSync(filePath, JSON.stringify(jsonObj ?? json, null, 2))
     exec(`npx prettier package**.json --write`)
   }
 
@@ -41,10 +41,8 @@ function main() {
   }, {})
 
   savePkgJSON()
-  Object.assign(nlsRecords, nls)
-  saveNls()
-  Object.assign(nlsRecords, zhNls)
-  saveZhNls()
+  saveNls(Object.assign(nlsRecords, nls))
+  saveZhNls(Object.assign(nlsRecords, zhNls))
 }
 
 main()

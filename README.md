@@ -43,6 +43,9 @@ powered by [change-case](https://github.com/blakeembrey/change-case)
 | `StringCaseUtils.noCase`           | String Case Utils: %command.noCase%           |
 | `StringCaseUtils.desensitize_star` | String Case Utils: %command.desensitize_star% |
 | `StringCaseUtils.desensitize_x`    | String Case Utils: %command.desensitize_x%    |
+| `StringCaseUtils.random_hash16`    | String Case Utils: %command.random_hash16%    |
+| `StringCaseUtils.random_hash32`    | String Case Utils: %command.random_hash32%    |
+| `StringCaseUtils.random_hash64`    | String Case Utils: %command.random_hash64%    |
 
 <!-- commands -->
 

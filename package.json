@@ -20,8 +20,7 @@
     "LICENSE.md",
     "README.md",
     "dist/*",
-    "package.nls.json",
-    "package.nls.zh-cn.json",
+    "package.nls*.json",
     "res/*"
   ],
   "main": "./dist/index.js",
@@ -143,6 +142,18 @@
         {
           "command": "StringCaseUtils.desensitize_x",
           "group": "1_modification@15"
+        },
+        {
+          "command": "StringCaseUtils.random_hash16",
+          "group": "1_modification@16"
+        },
+        {
+          "command": "StringCaseUtils.random_hash32",
+          "group": "1_modification@17"
+        },
+        {
+          "command": "StringCaseUtils.random_hash64",
+          "group": "1_modification@18"
         }
       ]
     },
@@ -226,6 +237,21 @@
         "title": "%command.desensitize_x%",
         "category": "String Case Utils",
         "command": "StringCaseUtils.desensitize_x"
+      },
+      {
+        "title": "%command.random_hash16%",
+        "category": "String Case Utils",
+        "command": "StringCaseUtils.random_hash16"
+      },
+      {
+        "title": "%command.random_hash32%",
+        "category": "String Case Utils",
+        "command": "StringCaseUtils.random_hash32"
+      },
+      {
+        "title": "%command.random_hash64%",
+        "category": "String Case Utils",
+        "command": "StringCaseUtils.random_hash64"
       }
     ]
   },

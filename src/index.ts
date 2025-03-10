@@ -20,13 +20,7 @@ import {
   useTextEditorSelections
 } from 'reactive-vscode'
 import { commands, displayName } from './generated/meta'
-import { logger } from './utils'
-import type { Selection } from 'vscode'
-
-interface TextSelectionData {
-  text: string
-  selection: Selection
-}
+import { logger, randomHash } from './utils'
 
 const { activate, deactivate } = defineExtension(() => {
   logger.info(`Extension [${displayName}] activated`)
@@ -34,7 +28,7 @@ const { activate, deactivate } = defineExtension(() => {
   const document = computed(() => editor.value?.document)
   const selections = useTextEditorSelections(editor)
 
-  const textSelectionsData = computed<TextSelectionData[]>(() =>
+  const textSelectionsData = computed(() =>
     selections.value.map(selection => ({
       text: document.value?.getText(selection) || '',
       selection
@@ -70,6 +64,11 @@ const { activate, deactivate } = defineExtension(() => {
   // desensitize
   useCommand(commands.desensitizeStar, () => replace(t => t.replaceAll(/[A-Z0-9]/gi, '*')))
   useCommand(commands.desensitizeX, () => replace(t => t.replaceAll(/[A-Z0-9]/gi, 'x')))
+
+  // random hash
+  useCommand(commands.randomHash16, () => replace(() => randomHash(16)))
+  useCommand(commands.randomHash32, () => replace(() => randomHash(32)))
+  useCommand(commands.randomHash64, () => replace(() => randomHash(64)))
 })
 
 export { activate, deactivate }

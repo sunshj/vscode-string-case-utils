@@ -68,7 +68,7 @@
     "submenus": [
       {
         "id": "stringCaseUtils",
-        "label": "String Case Utils"
+        "label": "🐍String Case Utils"
       }
     ],
     "menus": {

@@ -17,8 +17,11 @@
   "command.random_hash16": "Random Hash(16)",
   "command.random_hash32": "Random Hash(32)",
   "command.random_hash64": "Random Hash(64)",
+  "command.hash16": "Generate Hash(16)",
+  "command.hash32": "Generate Hash(32)",
+  "command.hash64": "Generate Hash(64)",
 
   "configuration.showDesensitizeOption": "Whether to show desensitize option",
   "configuration.desensitizeChar": "Desensitization character",
-  "configuration.showRandomHashOptions": "Whether to show random hash options"
+  "configuration.showHashOptions": "Whether to show hash options"
 }

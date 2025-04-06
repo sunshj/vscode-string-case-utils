@@ -85,10 +85,10 @@
           "default": "*",
           "description": "%configuration.desensitizeChar%"
         },
-        "stringCaseUtils.showRandomHashOptions": {
+        "stringCaseUtils.showHashOptions": {
           "type": "boolean",
           "default": true,
-          "description": "%configuration.showRandomHashOptions%"
+          "description": "%configuration.showHashOptions%"
         }
       }
     },
@@ -164,17 +164,32 @@
         {
           "command": "stringCaseUtils.random_hash16",
           "group": "1_modification@15",
-          "when": "config.stringCaseUtils.showRandomHashOptions"
+          "when": "config.stringCaseUtils.showHashOptions"
         },
         {
           "command": "stringCaseUtils.random_hash32",
           "group": "1_modification@16",
-          "when": "config.stringCaseUtils.showRandomHashOptions"
+          "when": "config.stringCaseUtils.showHashOptions"
         },
         {
           "command": "stringCaseUtils.random_hash64",
           "group": "1_modification@17",
-          "when": "config.stringCaseUtils.showRandomHashOptions"
+          "when": "config.stringCaseUtils.showHashOptions"
+        },
+        {
+          "command": "stringCaseUtils.hash16",
+          "group": "1_modification@18",
+          "when": "config.stringCaseUtils.showHashOptions"
+        },
+        {
+          "command": "stringCaseUtils.hash32",
+          "group": "1_modification@19",
+          "when": "config.stringCaseUtils.showHashOptions"
+        },
+        {
+          "command": "stringCaseUtils.hash64",
+          "group": "1_modification@20",
+          "when": "config.stringCaseUtils.showHashOptions"
         }
       ]
     },
@@ -268,6 +283,21 @@
         "title": "%command.random_hash64%",
         "category": "String Case Utils",
         "command": "stringCaseUtils.random_hash64"
+      },
+      {
+        "title": "%command.hash16%",
+        "category": "String Case Utils",
+        "command": "stringCaseUtils.hash16"
+      },
+      {
+        "title": "%command.hash32%",
+        "category": "String Case Utils",
+        "command": "stringCaseUtils.hash32"
+      },
+      {
+        "title": "%command.hash64%",
+        "category": "String Case Utils",
+        "command": "stringCaseUtils.hash64"
       }
     ]
   },

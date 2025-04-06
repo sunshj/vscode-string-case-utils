@@ -21,7 +21,7 @@ powered by [change-case](https://github.com/blakeembrey/change-case)
 | --------------------------------------- | ------------------------------------- | --------- | ------- |
 | `stringCaseUtils.showDesensitizeOption` | %configuration.showDesensitizeOption% | `boolean` | `true`  |
 | `stringCaseUtils.desensitizeChar`       | %configuration.desensitizeChar%       | `string`  | `"*"`   |
-| `stringCaseUtils.showRandomHashOptions` | %configuration.showRandomHashOptions% | `boolean` | `true`  |
+| `stringCaseUtils.showHashOptions`       | %configuration.showHashOptions%       | `boolean` | `true`  |
 
 <!-- configs -->
 
@@ -49,6 +49,9 @@ powered by [change-case](https://github.com/blakeembrey/change-case)
 | `stringCaseUtils.random_hash16`   | String Case Utils: %command.random_hash16%   |
 | `stringCaseUtils.random_hash32`   | String Case Utils: %command.random_hash32%   |
 | `stringCaseUtils.random_hash64`   | String Case Utils: %command.random_hash64%   |
+| `stringCaseUtils.hash16`          | String Case Utils: %command.hash16%          |
+| `stringCaseUtils.hash32`          | String Case Utils: %command.hash32%          |
+| `stringCaseUtils.hash64`          | String Case Utils: %command.hash64%          |
 
 <!-- commands -->
 

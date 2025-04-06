@@ -22,7 +22,7 @@ import {
 
 import { config } from './config'
 import { commands, displayName } from './generated/meta'
-import { logger, randomHash } from './utils'
+import { getHash, logger, randomHash } from './utils'
 
 const { activate, deactivate } = defineExtension(() => {
   logger.info(`Extension [${displayName}] activated`)
@@ -68,10 +68,13 @@ const { activate, deactivate } = defineExtension(() => {
     replace(t => t.replaceAll(/[A-Z0-9]/gi, config.desensitizeChar))
   )
 
-  // random hash
+  // hash
   useCommand(commands.randomHash16, () => replace(() => randomHash(16)))
   useCommand(commands.randomHash32, () => replace(() => randomHash(32)))
   useCommand(commands.randomHash64, () => replace(() => randomHash(64)))
+  useCommand(commands.hash16, () => replace(t => getHash(t, 16)))
+  useCommand(commands.hash32, () => replace(t => getHash(t, 32)))
+  useCommand(commands.hash64, () => replace(t => getHash(t, 64)))
 })
 
 export { activate, deactivate }

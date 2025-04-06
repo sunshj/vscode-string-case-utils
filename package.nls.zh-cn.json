@@ -17,8 +17,11 @@
   "command.random_hash16": "16位随机哈希 Random Hash(16)",
   "command.random_hash32": "32位随机哈希 Random Hash(32)",
   "command.random_hash64": "64位随机哈希 Random Hash(64)",
+  "command.hash16": "生成16位哈希 Generate Hash(16)",
+  "command.hash32": "生成32位哈希 Generate Hash(32)",
+  "command.hash64": "生成64位哈希 Generate Hash(64)",
 
   "configuration.showDesensitizeOption": "是否显示脱敏选项",
   "configuration.desensitizeChar": "设置默认脱敏字符",
-  "configuration.showRandomHashOptions": "是否显示随机哈希选项"
+  "configuration.showHashOptions": "是否显示哈希选项"
 }

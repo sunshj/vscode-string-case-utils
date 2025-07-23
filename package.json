@@ -26,8 +26,8 @@
   "main": "./dist/index.js",
   "icon": "res/icon.png",
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
     "prepare": "pnpm run update",
     "update": "vscode-ext-gen --output src/generated/meta.ts --scope stringCaseUtils",
     "vscode:prepublish": "pnpm run build",
@@ -53,7 +53,7 @@
     "prettier": "^3.4.2",
     "reactive-vscode": "^0.2.0",
     "simple-git-hooks": "^2.11.1",
-    "tsup": "^8.2.4",
+    "tsdown": "^0.13.0",
     "typescript": "^5.5.4",
     "vite": "^5.2.14",
     "vscode-ext-gen": "^0.4.1"

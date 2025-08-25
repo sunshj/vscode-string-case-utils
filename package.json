@@ -31,7 +31,7 @@
     "prepare": "pnpm run update",
     "update": "vscode-ext-gen --output src/generated/meta.ts --scope stringCaseUtils",
     "vscode:prepublish": "pnpm run build",
-    "pack": "vsce package --no-dependencies",
+    "pack": "vsce package --no-dependencies -o dist",
     "release": "bumpp --no-tag && pnpm run pack",
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --cache",

@@ -26,5 +26,5 @@
   "configuration.showHashOptions": "Whether to show hash options",
 
   "configuration.formatTemplateStringsOnSave": "Auto format template string tag functions on save",
-  "configuration.formatTagFunctions": "Custom tag function names to format (e.g., ['markdown', 'html', 'css'])"
+  "configuration.formatTagFunctionNames": "Custom tag function names to format (e.g., ['markdown', 'html', 'css'])"
 }

@@ -23,5 +23,8 @@
 
   "configuration.showDesensitizeOption": "Whether to show desensitize option",
   "configuration.desensitizeChar": "Desensitization character",
-  "configuration.showHashOptions": "Whether to show hash options"
+  "configuration.showHashOptions": "Whether to show hash options",
+
+  "configuration.formatTemplateStringsOnSave": "Auto format template string tag functions on save",
+  "configuration.formatTagFunctions": "Custom tag function names to format (e.g., ['markdown', 'html', 'css'])"
 }

@@ -17,11 +17,13 @@ powered by [change-case](https://github.com/blakeembrey/change-case)
 
 <!-- configs -->
 
-| Key                                     | Description                           | Type      | Default |
-| --------------------------------------- | ------------------------------------- | --------- | ------- |
-| `stringCaseUtils.showDesensitizeOption` | %configuration.showDesensitizeOption% | `boolean` | `true`  |
-| `stringCaseUtils.desensitizeChar`       | %configuration.desensitizeChar%       | `string`  | `"*"`   |
-| `stringCaseUtils.showHashOptions`       | %configuration.showHashOptions%       | `boolean` | `true`  |
+| Key                                           | Description                                 | Type      | Default                            |
+| --------------------------------------------- | ------------------------------------------- | --------- | ---------------------------------- |
+| `stringCaseUtils.showDesensitizeOption`       | %configuration.showDesensitizeOption%       | `boolean` | `true`                             |
+| `stringCaseUtils.desensitizeChar`             | %configuration.desensitizeChar%             | `string`  | `"*"`                              |
+| `stringCaseUtils.showHashOptions`             | %configuration.showHashOptions%             | `boolean` | `true`                             |
+| `stringCaseUtils.formatTemplateStringsOnSave` | %configuration.formatTemplateStringsOnSave% | `boolean` | `true`                             |
+| `stringCaseUtils.formatTagFunctionNames`      | %configuration.formatTagFunctionNames%      | `array`   | `["markdown","html","css","json"]` |
 
 <!-- configs -->
 

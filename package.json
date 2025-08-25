@@ -38,9 +38,6 @@
     "lint:fix": "eslint . --fix --cache",
     "format": "prettier . --write"
   },
-  "dependencies": {
-    "change-case": "^5.4.4"
-  },
   "devDependencies": {
     "@sunshj/eslint-config": "^2.2.1",
     "@sunshj/prettier-config": "^1.0.2",
@@ -48,12 +45,13 @@
     "@types/vscode": "^1.88.0",
     "@vscode/vsce": "^2.26.0",
     "bumpp": "^9.5.1",
+    "change-case": "^5.4.4",
     "eslint": "^9.10.0",
     "lint-staged": "15",
     "prettier": "^3.4.2",
     "reactive-vscode": "^0.2.0",
     "simple-git-hooks": "^2.11.1",
-    "tsdown": "^0.13.0",
+    "tsdown": "^0.14.2",
     "typescript": "^5.5.4",
     "vite": "^5.2.14",
     "vscode-ext-gen": "^0.4.1"
@@ -89,6 +87,50 @@
           "type": "boolean",
           "default": true,
           "description": "%configuration.showHashOptions%"
+        },
+        "stringCaseUtils.formatTemplateStringsOnSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "%configuration.formatTemplateStringsOnSave%"
+        },
+        "stringCaseUtils.formatTagFunctionNames": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": true,
+            "minItems": 1,
+            "enum": [
+              "css",
+              "gql",
+              "graphql",
+              "ng",
+              "angular",
+              "html",
+              "json",
+              "json5",
+              "jsonc",
+              "less",
+              "md",
+              "markdown",
+              "mdx",
+              "scss",
+              "js",
+              "jsx",
+              "tsx",
+              "ts",
+              "typescript",
+              "vue",
+              "yaml",
+              "yml"
+            ]
+          },
+          "default": [
+            "markdown",
+            "html",
+            "css",
+            "json"
+          ],
+          "description": "%configuration.formatTagFunctionNames%"
         }
       }
     },

@@ -23,5 +23,8 @@
 
   "configuration.showDesensitizeOption": "是否显示脱敏选项",
   "configuration.desensitizeChar": "设置默认脱敏字符",
-  "configuration.showHashOptions": "是否显示哈希选项"
+  "configuration.showHashOptions": "是否显示哈希选项",
+
+  "configuration.formatTemplateStringsOnSave": "保存时自动格式化模板字符串标签函数",
+  "configuration.formatTagFunctionNames": "自定义要格式化的标签函数名称 (例如: ['markdown', 'html', 'css'])"
 }

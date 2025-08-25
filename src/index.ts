@@ -17,12 +17,14 @@ import {
   defineExtension,
   useActiveTextEditor,
   useCommand,
+  useDisposable,
   useTextEditorSelections
 } from 'reactive-vscode'
+import { Range, workspace, WorkspaceEdit } from 'vscode'
 
 import { config } from './config'
 import { commands, displayName } from './generated/meta'
-import { getHash, logger, randomHash } from './utils'
+import { formatTagFunctions, getHash, logger, randomHash } from './utils'
 
 const { activate, deactivate } = defineExtension(() => {
   logger.info(`Extension [${displayName}] activated`)
@@ -75,6 +77,33 @@ const { activate, deactivate } = defineExtension(() => {
   useCommand(commands.hash16, () => replace(t => getHash(t, 16)))
   useCommand(commands.hash32, () => replace(t => getHash(t, 32)))
   useCommand(commands.hash64, () => replace(t => getHash(t, 64)))
+
+  // auto format on save
+  useDisposable(
+    workspace.onWillSaveTextDocument(async event => {
+      if (!config.formatTemplateStringsOnSave) {
+        return
+      }
+
+      if (document.value && document.value.uri.toString() === event.document.uri.toString()) {
+        const isJsTs = /\.(?:js|cjs|mjs|jsx|ts|cts|mts|tsx)$/.test(event.document.fileName)
+        if (!isJsTs) return
+
+        const originalText = event.document.getText()
+        const formattedText = await formatTagFunctions(originalText, event.document.fileName)
+
+        if (formattedText !== originalText) {
+          const edit = new WorkspaceEdit()
+          const fullRange = new Range(
+            event.document.positionAt(0),
+            event.document.positionAt(originalText.length)
+          )
+          edit.replace(event.document.uri, fullRange, formattedText)
+          event.waitUntil(workspace.applyEdit(edit))
+        }
+      }
+    })
+  )
 })
 
 export { activate, deactivate }
